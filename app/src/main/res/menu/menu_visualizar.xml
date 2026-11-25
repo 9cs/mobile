@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Menu da tela Visualizar trilha -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Alterna o mapa entre vetorial e satélite -->
+    <item
+        android:id="@+id/acao_tipo_mapa"
+        android:icon="@drawable/ic_camadas_branco"
+        android:showAsAction="ifRoom"
+        android:title="@string/alternar_tipo_mapa" />
     <item
         android:id="@+id/acao_renomear"
         android:icon="@drawable/ic_editar_branco"

@@ -218,10 +218,30 @@ public class VisualizarTrilhaActivity extends BaseActivity {
         return true;
     }
 
+    /**
+     * Botão de camadas: alterna o mapa entre vetorial e satélite. A escolha é
+     * gravada nas preferências (a mesma da tela de Configuração), então as
+     * outras telas também passam a usar o novo tipo de mapa.
+     */
+    private void alternarTipoMapa() {
+        if (mapa == null) {
+            return;
+        }
+        boolean satelite = Preferencias.getTipoMapa(this) != Preferencias.MAPA_SATELITE;
+        Preferencias.setTipoMapa(this, satelite ? Preferencias.MAPA_SATELITE : Preferencias.MAPA_VETORIAL);
+        MapaUtils.aplicarTipoMapa(this, mapa);
+        mapa.invalidate();
+        Toast.makeText(this, satelite ? R.string.mapa_agora_satelite : R.string.mapa_agora_vetorial,
+                Toast.LENGTH_SHORT).show();
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.acao_renomear) {
+        if (id == R.id.acao_tipo_mapa) {
+            alternarTipoMapa();
+            return true;
+        } else if (id == R.id.acao_renomear) {
             Dialogos.pedirNome(this, R.string.renomear_trilha, trilha.getNome(), R.string.salvar, novoNome -> {
                 dao.renomear(trilha.getId(), novoNome);
                 trilha.setNome(novoNome);

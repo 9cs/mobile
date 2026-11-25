@@ -110,6 +110,9 @@
     <string name="rotulo_inicio">Início: %1$s</string>
     <string name="inicio">Início</string>
     <string name="fim">Fim</string>
+    <string name="alternar_tipo_mapa">Tipo de mapa</string>
+    <string name="mapa_agora_satelite">Mapa: satélite</string>
+    <string name="mapa_agora_vetorial">Mapa: vetorial</string>
     <string name="trilha_nao_encontrada">Trilha não encontrada.</string>
     <string name="trilha_sem_pontos">Esta trilha não possui posições registradas.</string>
 
