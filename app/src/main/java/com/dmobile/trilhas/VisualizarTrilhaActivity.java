@@ -1,5 +1,6 @@
 package com.dmobile.trilhas;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -132,12 +133,13 @@ public class VisualizarTrilhaActivity extends BaseActivity {
         mapa.getOverlays().add(criarLinha(getResources().getColor(R.color.contorno_percurso), 9 * d));
         mapa.getOverlays().add(criarLinha(getResources().getColor(R.color.linha_percurso), 5 * d));
 
-        // Marcadores personalizados de início (I) e fim (F); tocar mostra a data/hora
-        mapa.getOverlays().add(criarPino(percurso.get(0), R.color.pino_inicio, "I",
-                R.string.inicio, trilha.getDataInicio()));
+        // Marcadores personalizados: bandeira verde no início e bandeira quadriculada
+        // de chegada no fim; tocar numa bandeira mostra a data/hora
+        mapa.getOverlays().add(criarBandeira(percurso.get(0),
+                MarcadorFactory.criarBandeiraInicio(this), R.string.inicio, trilha.getDataInicio()));
         if (percurso.size() > 1) {
-            mapa.getOverlays().add(criarPino(percurso.get(percurso.size() - 1), R.color.pino_fim, "F",
-                    R.string.fim, trilha.getDataFim()));
+            mapa.getOverlays().add(criarBandeira(percurso.get(percurso.size() - 1),
+                    MarcadorFactory.criarBandeiraChegada(this), R.string.fim, trilha.getDataFim()));
         }
 
         // O enquadramento precisa do tamanho da tela: espera o primeiro layout
@@ -153,14 +155,16 @@ public class VisualizarTrilhaActivity extends BaseActivity {
         return linha;
     }
 
-    private Marker criarPino(GeoPoint posicao, int cor, String letra, int titulo, long dataHora) {
-        Marker pino = new Marker(mapa);
-        pino.setPosition(posicao);
-        pino.setIcon(MarcadorFactory.criarPino(this, getResources().getColor(cor), letra));
-        pino.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        pino.setTitle(getString(titulo));
-        pino.setSnippet(Formatador.dataHora(dataHora));
-        return pino;
+    /** Bandeira fincada no ponto: a âncora é a base do mastro (centro, embaixo). */
+    private Marker criarBandeira(GeoPoint posicao, Drawable icone,
+                                 int titulo, long dataHora) {
+        Marker bandeira = new Marker(mapa);
+        bandeira.setPosition(posicao);
+        bandeira.setIcon(icone);
+        bandeira.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        bandeira.setTitle(getString(titulo));
+        bandeira.setSnippet(Formatador.dataHora(dataHora));
+        return bandeira;
     }
 
     /**

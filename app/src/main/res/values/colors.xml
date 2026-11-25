@@ -22,9 +22,12 @@
     <color name="laranja_claro">#FFF3E0</color>
 
     <!-- Mapa -->
-    <color name="marcador_usuario">#1E88E5</color>
+    <!-- Marcador do usuário e círculo de acurácia (verde do app) -->
+    <color name="marcador_usuario">#2E7D32</color>
+    <!-- Triângulo que indica o rumo do deslocamento -->
+    <color name="indicador_rumo">#EF6C00</color>
     <color name="linha_percurso">#F4511E</color>
     <color name="contorno_percurso">#FFFFFF</color>
-    <color name="pino_inicio">#2E7D32</color>
-    <color name="pino_fim">#D32F2F</color>
+    <!-- Bandeira de início (a de chegada é quadriculada preto e branco) -->
+    <color name="bandeira_inicio">#43A047</color>
 </resources>

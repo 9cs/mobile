@@ -91,6 +91,7 @@ public class RegistrarTrilhaActivity extends BaseActivity
 
     // ----- Elementos desenhados no mapa -----
     private Marker marcadorUsuario;
+    private Marker indicadorRumo;
     private Polygon circuloPrecisao;
     private Polyline linhaPercurso;
     private CopyrightOverlay creditos;
@@ -295,18 +296,28 @@ public class RegistrarTrilhaActivity extends BaseActivity
         circuloPrecisao.setInfoWindow(null);
         circuloPrecisao.setVisible(false);
 
-        // Marcador personalizado (seta desenhada com Canvas)
+        // Indicador de rumo: triângulo que gira em volta do usuário (desenhado com Canvas)
+        indicadorRumo = new Marker(mapa);
+        indicadorRumo.setIcon(MarcadorFactory.criarIndicadorRumo(this));
+        indicadorRumo.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
+        indicadorRumo.setFlat(true); // gira junto com o mapa (aponta o rumo real)
+        indicadorRumo.setInfoWindow(null);
+        indicadorRumo.setOnMarkerClickListener((m, v) -> true);
+        indicadorRumo.setVisible(false);
+
+        // Marcador personalizado do usuário: círculo verde com a pessoa caminhando.
+        // Não é "flat": fica sempre em pé, mesmo com o mapa girado (Course Up).
         marcadorUsuario = new Marker(mapa);
         marcadorUsuario.setIcon(MarcadorFactory.criarMarcadorUsuario(this));
         marcadorUsuario.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
-        marcadorUsuario.setFlat(true); // gira junto com o mapa
         marcadorUsuario.setInfoWindow(null);
         marcadorUsuario.setOnMarkerClickListener((m, v) -> true);
         marcadorUsuario.setVisible(false);
 
-        // Ordem de desenho: linha, círculo e, por cima, o marcador
+        // Ordem de desenho: linha, círculo, indicador de rumo e, por cima, o marcador
         mapa.getOverlays().add(linhaPercurso);
         mapa.getOverlays().add(circuloPrecisao);
+        mapa.getOverlays().add(indicadorRumo);
         mapa.getOverlays().add(marcadorUsuario);
     }
 
@@ -345,9 +356,12 @@ public class RegistrarTrilhaActivity extends BaseActivity
         GeoPoint posicao = new GeoPoint(local.getLatitude(), local.getLongitude());
 
         marcadorUsuario.setPosition(posicao);
-        // O osmdroid gira o marcador no sentido anti-horário; o rumo é horário
-        marcadorUsuario.setRotation(-ultimoRumo);
         marcadorUsuario.setVisible(true);
+
+        indicadorRumo.setPosition(posicao);
+        // O osmdroid gira o marcador no sentido anti-horário; o rumo é horário
+        indicadorRumo.setRotation(-ultimoRumo);
+        indicadorRumo.setVisible(true);
 
         circuloPrecisao.setPoints(Polygon.pointsAsCircle(posicao, Math.max(precisao, 1f)));
         circuloPrecisao.setVisible(precisao > 0);
