@@ -92,6 +92,8 @@ public class TrilhasDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CRIAR_TRILHA);
         db.execSQL(SQL_CRIAR_PONTO);
         db.execSQL(SQL_INDICE_PONTO);
+        // Primeira instalação: grava uma trilha de exemplo para demonstração
+        TrilhaExemplo.inserir(db);
     }
 
     @Override
