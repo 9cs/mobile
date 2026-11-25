@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema base (API 17 a 20): Holo claro com barra de ação verde -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="android:windowBackground">@color/fundo</item>
+        <item name="android:textColorPrimary">@color/texto_primario</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/primaria</item>
+    </style>
+
+    <!-- Textos reutilizados -->
+    <style name="Texto" />
+
+    <!-- Rótulo pequeno em maiúsculas (ex.: "DISTÂNCIA") -->
+    <style name="Texto.Rotulo">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Valor numérico destacado nos painéis -->
+    <style name="Texto.Valor">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto_primario</item>
+    </style>
+
+    <style name="Texto.Titulo">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/texto_primario</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Texto.Descricao">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <!-- Cartão branco com cantos arredondados e efeito de toque -->
+    <style name="Cartao">
+        <item name="android:background">@drawable/bg_cartao</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Botão principal grande -->
+    <style name="BotaoPrincipal">
+        <item name="android:layout_height">@dimen/altura_botao</item>
+        <item name="android:background">@drawable/bg_botao_primario</item>
+        <item name="android:textColor">@color/texto_claro</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <!-- Opção de rádio da tela de configuração -->
+    <style name="OpcaoRadio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/texto_primario</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="OpcaoRadio.Descricao">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">32dp</item>
+    </style>
+</resources>

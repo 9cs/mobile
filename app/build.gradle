@@ -1,0 +1,40 @@
+// Build do módulo do aplicativo "Trilhas".
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace = 'com.dmobile.trilhas'
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = 'com.dmobile.trilhas'
+        minSdk = 17          // requisito do trabalho
+        targetSdk = 36
+        versionCode = 1
+        versionName = '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    lint {
+        // Atributos como android:elevation são ignorados em APIs antigas: apenas avisos.
+        abortOnError = false
+    }
+}
+
+dependencies {
+    // osmdroid: mapas do OpenStreetMap (sem chave de API), com MapView,
+    // marcadores, polilinhas e polígonos. Suporta Android 4.2 (API 17).
+    implementation 'org.osmdroid:osmdroid-android:6.1.20'
+}

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 1 - Configuração: tipo de mapa e forma de navegação -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/conteudo_configuracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===== Tipo de mapa ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_painel"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icone_verde"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_camadas" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Texto.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secao_tipo_mapa" />
+
+                    <TextView
+                        style="@style/Texto.Descricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secao_tipo_mapa_descricao"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/divisor" />
+
+            <RadioGroup
+                android:id="@+id/grupo_tipo_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/opcao_vetorial"
+                    style="@style/OpcaoRadio"
+                    android:text="@string/mapa_vetorial" />
+
+                <TextView
+                    style="@style/OpcaoRadio.Descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mapa_vetorial_descricao" />
+
+                <RadioButton
+                    android:id="@+id/opcao_satelite"
+                    style="@style/OpcaoRadio"
+                    android:text="@string/mapa_satelite" />
+
+                <TextView
+                    style="@style/OpcaoRadio.Descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mapa_satelite_descricao" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- ===== Forma de navegação ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_painel"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icone_verde"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_bussola" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Texto.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secao_navegacao" />
+
+                    <TextView
+                        style="@style/Texto.Descricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secao_navegacao_descricao"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/divisor" />
+
+            <RadioGroup
+                android:id="@+id/grupo_navegacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/opcao_north_up"
+                    style="@style/OpcaoRadio"
+                    android:text="@string/navegacao_north_up_opcao" />
+
+                <TextView
+                    style="@style/OpcaoRadio.Descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/navegacao_north_up_descricao" />
+
+                <RadioButton
+                    android:id="@+id/opcao_course_up"
+                    style="@style/OpcaoRadio"
+                    android:text="@string/navegacao_course_up" />
+
+                <TextView
+                    style="@style/OpcaoRadio.Descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/navegacao_course_up_descricao" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.Descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/configuracao_automatica"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_restaurar_padrao"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/restaurar_padrao"
+            android:textColor="@color/primaria" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema para Android 5.0+ : Material Design com as cores do aplicativo -->
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/primaria</item>
+        <item name="android:colorPrimaryDark">@color/primaria_escura</item>
+        <item name="android:colorAccent">@color/primaria</item>
+        <item name="android:windowBackground">@color/fundo</item>
+        <item name="android:textColorPrimary">@color/texto_primario</item>
+        <item name="android:statusBarColor">@color/primaria_escura</item>
+    </style>
+</resources>

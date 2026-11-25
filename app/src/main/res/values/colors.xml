@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Identidade visual (tons de verde, tema "trilha") -->
+    <color name="primaria">#2E7D32</color>
+    <color name="primaria_escura">#1B5E20</color>
+    <color name="primaria_clara">#E8F5E9</color>
+
+    <color name="fundo">#F3F5F2</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="painel_fundo">#F5FFFFFF</color>
+    <color name="divisor">#E2E6E1</color>
+    <color name="pressionado">#EEF2ED</color>
+
+    <color name="texto_primario">#1D2B1F</color>
+    <color name="texto_secundario">#5E6B60</color>
+    <color name="texto_claro">#FFFFFF</color>
+    <color name="texto_claro_secundario">#CCFFFFFF</color>
+
+    <color name="vermelho">#D32F2F</color>
+    <color name="vermelho_escuro">#A82525</color>
+    <color name="azul_claro">#E3F2FD</color>
+    <color name="laranja_claro">#FFF3E0</color>
+
+    <!-- Mapa -->
+    <color name="marcador_usuario">#1E88E5</color>
+    <color name="linha_percurso">#F4511E</color>
+    <color name="contorno_percurso">#FFFFFF</color>
+    <color name="pino_inicio">#2E7D32</color>
+    <color name="pino_fim">#D32F2F</color>
+</resources>

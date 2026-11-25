@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Localização precisa (GPS) para registrar o percurso -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Necessárias para carregar os blocos do mapa -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Serviço em primeiro plano que continua gravando com a tela desligada -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Cache dos blocos do mapa: em Android 4.2/4.3 a pasta do app no
+         armazenamento externo exige esta permissão (dispensável a partir do 4.4) -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+
+    <application
+        android:name=".TrilhasApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Tela inicial (menu) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 1. Configuração -->
+        <activity
+            android:name=".ConfiguracaoActivity"
+            android:label="@string/titulo_configuracao"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 2. Registrar trilha -->
+        <activity
+            android:name=".RegistrarTrilhaActivity"
+            android:label="@string/titulo_registrar"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 3. Consultar trilhas (lista) -->
+        <activity
+            android:name=".ConsultarTrilhasActivity"
+            android:label="@string/titulo_consultar"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 3. Visualizar uma trilha no mapa -->
+        <activity
+            android:name=".VisualizarTrilhaActivity"
+            android:label="@string/titulo_visualizar"
+            android:parentActivityName=".ConsultarTrilhasActivity" />
+
+        <!-- Serviço que recebe as posições do GPS e grava a trilha no SQLite -->
+        <service
+            android:name=".servico.RastreamentoService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+    </application>
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu da tela Registrar trilha -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/acao_configuracoes"
+        android:icon="@drawable/ic_configuracoes_branco"
+        android:showAsAction="ifRoom"
+        android:title="@string/titulo_configuracao" />
+</menu>

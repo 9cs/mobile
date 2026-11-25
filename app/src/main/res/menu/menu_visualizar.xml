@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu da tela Visualizar trilha -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/acao_renomear"
+        android:icon="@drawable/ic_editar_branco"
+        android:showAsAction="ifRoom"
+        android:title="@string/opcao_renomear" />
+    <item
+        android:id="@+id/acao_apagar"
+        android:icon="@drawable/ic_apagar_branco"
+        android:showAsAction="ifRoom"
+        android:title="@string/opcao_apagar" />
+</menu>

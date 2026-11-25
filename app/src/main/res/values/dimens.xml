@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="espaco_grande">20dp</dimen>
+    <dimen name="raio_cartao">16dp</dimen>
+    <dimen name="tamanho_icone_cartao">48dp</dimen>
+    <dimen name="altura_botao">56dp</dimen>
+</resources>

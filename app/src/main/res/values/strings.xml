@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trilhas</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- Títulos das telas -->
+    <string name="titulo_configuracao">Configuração</string>
+    <string name="titulo_registrar">Registrar trilha</string>
+    <string name="titulo_consultar">Minhas trilhas</string>
+    <string name="titulo_visualizar">Trilha</string>
+
+    <!-- Tela inicial -->
+    <string name="cabecalho_titulo">Suas trilhas</string>
+    <string name="cabecalho_subtitulo">Registre percursos e reveja cada caminhada no mapa.</string>
+    <string name="rotulo_trilhas">trilhas</string>
+    <string name="rotulo_trilha_singular">trilha</string>
+    <string name="rotulo_percorridos">percorridos</string>
+    <string name="menu_registrar">Registrar trilha</string>
+    <string name="menu_registrar_descricao">Grave seu percurso com GPS</string>
+    <string name="menu_registrar_gravando">Gravação em andamento. Toque para ver</string>
+    <string name="menu_consultar">Consultar trilhas</string>
+    <string name="menu_consultar_descricao">Veja, renomeie ou apague trilhas</string>
+    <string name="menu_configuracao">Configuração</string>
+    <string name="menu_configuracao_descricao">Tipo de mapa e forma de navegação</string>
+    <string name="gravando">GRAVANDO</string>
+
+    <!-- Configuração -->
+    <string name="secao_tipo_mapa">Tipo de mapa</string>
+    <string name="secao_tipo_mapa_descricao">Como o mapa é desenhado em todas as telas.</string>
+    <string name="mapa_vetorial">Vetorial (padrão)</string>
+    <string name="mapa_vetorial_descricao">Ruas, trilhas e nomes de lugares.</string>
+    <string name="mapa_satelite">Satélite</string>
+    <string name="mapa_satelite_descricao">Imagens reais vistas de cima.</string>
+    <string name="secao_navegacao">Forma de navegação</string>
+    <string name="secao_navegacao_descricao">Orientação do mapa durante o registro da trilha.</string>
+    <string name="navegacao_north_up">North Up</string>
+    <string name="navegacao_course_up">Course Up</string>
+    <string name="navegacao_north_up_opcao">North Up (padrão)</string>
+    <string name="navegacao_north_up_descricao">O mapa fica sempre voltado para o norte.</string>
+    <string name="navegacao_course_up_descricao">O mapa gira para acompanhar a direção em que você se desloca (rumo).</string>
+    <string name="configuracao_salva">Configuração salva</string>
+    <string name="configuracao_automatica">As alterações são salvas automaticamente.</string>
+    <string name="restaurar_padrao">Restaurar padrão</string>
+
+    <!-- Registrar trilha -->
+    <string name="rotulo_velocidade">Velocidade</string>
+    <string name="unidade_kmh">km/h</string>
+    <string name="rotulo_maxima">Máxima</string>
+    <string name="rotulo_distancia">Distância</string>
+    <string name="rotulo_tempo">Tempo</string>
+    <string name="rotulo_precisao">Precisão %1$s</string>
+    <string name="iniciar_trilha">Iniciar trilha</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="centralizar">Centralizar no usuário</string>
+    <string name="nova_trilha">Nova trilha</string>
+    <string name="dica_nome_trilha">Nome da trilha</string>
+    <string name="nome_trilha_padrao">Trilha de %1$s</string>
+    <string name="erro_nome_vazio">Informe um nome</string>
+    <string name="status_aguardando_sinal">Aguardando sinal do GPS…</string>
+    <string name="status_pronto">GPS pronto. Toque em Iniciar trilha.</string>
+    <string name="status_gravando">Gravando trilha</string>
+    <string name="status_gps_desligado">GPS desligado</string>
+    <string name="status_sem_permissao">Permissão de localização não concedida</string>
+    <string name="permissao_necessaria">O aplicativo precisa da localização precisa para registrar trilhas.</string>
+    <string name="gps_desligado_titulo">GPS desligado</string>
+    <string name="gps_desligado_mensagem">Ative a localização do aparelho para registrar a trilha.</string>
+    <string name="abrir_configuracoes">Ativar</string>
+    <string name="finalizar_trilha">Finalizar trilha?</string>
+    <string name="finalizar_trilha_mensagem">A gravação será encerrada e a trilha será salva.</string>
+    <string name="trilha_salva">Trilha salva</string>
+    <string name="resumo_trilha">Distância: %1$s\nDuração: %2$s\nVelocidade máxima: %3$s</string>
+    <string name="trilha_descartada">Nenhuma posição foi registrada. A trilha foi descartada.</string>
+    <string name="gravacao_continua">A gravação continua em segundo plano</string>
+    <string name="ver_no_mapa">Ver no mapa</string>
+    <string name="fechar">Fechar</string>
+
+    <!-- Notificação -->
+    <string name="canal_notificacao">Gravação de trilhas</string>
+    <string name="canal_notificacao_descricao">Exibida enquanto uma trilha está sendo gravada.</string>
+    <string name="notificacao_titulo">Gravando: %1$s</string>
+    <string name="notificacao_texto">%1$s percorridos • %2$s</string>
+
+    <!-- Consultar trilhas -->
+    <string name="lista_vazia_titulo">Nenhuma trilha registrada</string>
+    <string name="lista_vazia_texto">As trilhas gravadas em \"Registrar trilha\" aparecem aqui.</string>
+    <string name="rotulo_duracao">Duração</string>
+    <string name="rotulo_vel_media">Vel. média</string>
+    <string name="opcao_ver_mapa">Consultar no mapa</string>
+    <string name="opcao_renomear">Renomear</string>
+    <string name="opcao_apagar">Apagar</string>
+    <string name="renomear_trilha">Renomear trilha</string>
+    <string name="salvar">Salvar</string>
+    <string name="trilha_renomeada">Nome alterado</string>
+    <string name="apagar">Apagar</string>
+    <string name="apagar_trilha">Apagar trilha?</string>
+    <string name="apagar_trilha_mensagem">A trilha \"%1$s\" e todo o seu percurso serão apagados.</string>
+    <string name="trilha_apagada">Trilha apagada</string>
+    <string name="apagar_periodo">Apagar por período</string>
+    <string name="apagar_todas">Apagar todas</string>
+    <string name="periodo_instrucao">Apagar as trilhas iniciadas entre as datas:</string>
+    <string name="rotulo_de">De</string>
+    <string name="rotulo_ate">Até</string>
+    <string name="continuar">Continuar</string>
+    <string name="erro_periodo_invalido">A data inicial deve ser anterior ou igual à data final.</string>
+    <string name="nenhuma_trilha_periodo">Nenhuma trilha foi iniciada nesse período.</string>
+    <string name="erro_apagar_em_gravacao">Finalize a gravação em andamento antes de apagar.</string>
+
+    <!-- Visualizar trilha -->
+    <string name="rotulo_inicio">Início: %1$s</string>
+    <string name="inicio">Início</string>
+    <string name="fim">Fim</string>
+    <string name="trilha_nao_encontrada">Trilha não encontrada.</string>
+    <string name="trilha_sem_pontos">Esta trilha não possui posições registradas.</string>
+
+    <plurals name="resumo_lista">
+        <item quantity="one">%1$d trilha • %2$s no total</item>
+        <item quantity="other">%1$d trilhas • %2$s no total</item>
+    </plurals>
+    <plurals name="trilhas_apagadas">
+        <item quantity="one">%1$d trilha apagada</item>
+        <item quantity="other">%1$d trilhas apagadas</item>
+    </plurals>
+    <plurals name="apagar_periodo_mensagem">
+        <item quantity="one">%1$d trilha iniciada entre %2$s e %3$s será apagada.</item>
+        <item quantity="other">%1$d trilhas iniciadas entre %2$s e %3$s serão apagadas.</item>
+    </plurals>
+    <plurals name="apagar_todas_mensagem">
+        <item quantity="one">A única trilha registrada será apagada. Esta ação não pode ser desfeita.</item>
+        <item quantity="other">Todas as %1$d trilhas serão apagadas. Esta ação não pode ser desfeita.</item>
+    </plurals>
+</resources>
